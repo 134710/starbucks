@@ -1,22 +1,3 @@
-// 검색창
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click',function() {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus',function(){
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder','통합검색');
-})
-
-searchInputEl.addEventListener('blur',function(){
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder','');
-})
-
-
 // BADGE 스크롤 반응 , lodash 
 // _.throttle(함수, 시간) 
 const badgeEl = document.querySelector('header .badges');
@@ -152,6 +133,3 @@ spyEls.forEach(function(spyEl) {
         .addTo(new ScrollMagic.Controller());
 });
 
-// copyright 년도 자동 계산 출력
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); 
